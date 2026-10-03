@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Notes & Resources</title>
+    <meta name="description" content="Download class notes, apps, and study materials.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <h1 id="site-title" onclick="app.goHome()">My Notes</h1>
+            <nav>
+                <button onclick="app.goHome()">Home</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- ================= AD SLOT 1 (Top Advertisement) ================= -->
+        <div class="ad-container top-ad">
+            <script>
+              atOptions = {
+                'key' : '0796fee33dfc2504b467d46de6de2a99',
+                'format' : 'iframe',
+                'height' : 90,
+                'width' : 728,
+                'params' : {}
+              };
+            </script>
+            <script src="https://www.highrevenueformat.com/0796fee33dfc2504b467d46de6de2a99/invoke.js"></script>
+        </div>
+        <!-- ================================================================= -->
+
+        <!-- VIEW 1: HOME (Resource List) -->
+        <section id="view-home" class="view active">
+            
+            <div class="search-filter-bar">
+                <input type="text" id="search-input" placeholder="Search resources..." aria-label="Search resources">
+                <select id="category-filter" aria-label="Filter by category">
+                    <option value="All">All Categories</option>
+                </select>
+            </div>
+
+            <!-- ================= AD SLOT 2 (Below Heading) ================= -->
+            <div class="ad-container middle-ad">
+                <script>
+                  atOptions = {
+                    'key' : '1c94fa584a396abc50c7723d0e098ed4',
+                    'format' : 'iframe',
+                    'height' : 60,
+                    'width' : 468,
+                    'params' : {}
+                  };
+                </script>
+                <script src="https://www.highrevenueformat.com/1c94fa584a396abc50c7723d0e098ed4/invoke.js"></script>
+            </div>
+            <!-- ============================================================= -->
+
+            <div id="resources-grid" class="grid">
+                <!-- Resources will be injected here by JavaScript -->
+            </div>
+            
+            <!-- ================= AD SLOT 3 (Between Content) ================= -->
+            <div class="ad-container content-ad">
+                <script src="https://pl31639867.profitableratecpmnetwork.com/e9/cc/6e/e9cc6e6739c14fac9e8ff0f09764f5fb.js"></script>
+            </div>
+            <!-- =============================================================== -->
+        </section>
+
+        <!-- VIEW 2: ACCESS FLOW (6 Steps) -->
+        <section id="view-flow" class="view hidden">
+            <div class="flow-card">
+                <h2 id="flow-title">Resource Verification</h2>
+                <p id="flow-desc">Please complete the steps to unlock your resource.</p>
+                
+                <div class="progress-bar-container">
+                    <div id="progress-bar"></div>
+                </div>
+                <p id="step-indicator">Step 1 of 6</p>
+
+                <!-- ================= AD SLOT 4 (Above Countdown) ================= -->
+                <div class="ad-container above-timer-ad">
+                    <script>
+                      atOptions = {
+                        'key' : 'cfd65b36b045c07cef9a05df77feefad',
+                        'format' : 'iframe',
+                        'height' : 50,
+                        'width' : 320,
+                        'params' : {}
+                      };
+                    </script>
+                    <script src="https://www.highperformanceformat.com/cfd65b36b045c07cef9a05df77feefad/invoke.js"></script>
+                </div>
+                <!-- =============================================================== -->
+
+                <div class="timer-box">
+                    <p class="wait-text">Please wait <span id="countdown-timer">30</span> seconds before continuing.</p>
+                    <button id="btn-continue" class="btn-primary" disabled>Please Wait...</button>
+                </div>
+
+                <!-- ================= AD SLOT 5 (Below Countdown) ================= -->
+                <div class="ad-container below-timer-ad">
+                    <script>
+                      atOptions = {
+                        'key' : '0c17a1d10fe847fc28802f322a670fb9',
+                        'format' : 'iframe',
+                        'height' : 50,
+                        'width' : 320,
+                        'params' : {}
+                      };
+                    </script>
+                    <script src="https://www.highrevenueformat.com/0c17a1d10fe847fc28802f322a670fb9/invoke.js"></script>
+                </div>
+                <!-- =============================================================== -->
+            </div>
+        </section>
+
+        <!-- VIEW 3: FINAL DOWNLOAD -->
+        <section id="view-final" class="view hidden">
+            <div class="final-card">
+                <h2>Your resource is ready!</h2>
+                <img id="final-image" src="" alt="Resource Thumbnail" class="final-thumbnail">
+                <h3 id="final-title">Title</h3>
+                <p id="final-desc">Description</p>
+                
+                <a id="btn-download" href="#" target="_blank" rel="noopener noreferrer" class="btn-success">Download / Open Resource</a>
+                
+                <br><br>
+                <button onclick="app.goHome()" class="btn-secondary">Return Home</button>
+            </div>
+        </section>
+        
+        <!-- ================= AD SLOT 6 (Bottom Advertisement) ================= -->
+        <div class="ad-container bottom-ad">
+            <script async="async" data-cfasync="false" src="https://pl31639887.profitableratecpmnetwork.com/cc6abcf1f92971c886c3d6d8d0437d6d/invoke.js"></script>
+            <div id="container-cc6abcf1f92971c886c3d6d8d0437d6d"></div>
+        </div>
+        <!-- ==================================================================== -->
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> <span id="footer-site-name"></span>. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Disclaimer</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

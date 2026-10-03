@@ -1,0 +1,281 @@
+/* CSS Variables for easy theming (Dark/Light responsive) */
+:root {
+    --bg-color: #f4f6f8;
+    --text-color: #333333;
+    --card-bg: #ffffff;
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --success-color: #10b981;
+    --success-hover: #059669;
+    --border-color: #e5e7eb;
+    --text-muted: #6b7280;
+    --ad-bg: #f3f4f6;
+    --radius: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #111827;
+        --text-color: #f9fafb;
+        --card-bg: #1f2937;
+        --border-color: #374151;
+        --text-muted: #9ca3af;
+        --ad-bg: #374151;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav button {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+main {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    width: 100%;
+}
+
+/* Views */
+.view { display: none; animation: fadeIn 0.3s ease-in; }
+.view.active { display: block; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Search and Filter */
+.search-filter-bar {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.search-filter-bar input, .search-filter-bar select {
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    flex: 1;
+    min-width: 200px;
+    font-size: 1rem;
+}
+
+/* Grid & Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    background-color: var(--border-color);
+}
+
+.card-content {
+    padding: 1.25rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-category {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    flex: 1;
+}
+
+/* Buttons */
+.btn-primary, .btn-success, .btn-secondary {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    text-align: center;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.btn-primary { background-color: var(--primary-color); color: white; }
+.btn-primary:hover:not(:disabled) { background-color: var(--primary-hover); }
+.btn-primary:disabled { background-color: var(--text-muted); cursor: not-allowed; opacity: 0.7; }
+
+.btn-success { background-color: var(--success-color); color: white; }
+.btn-success:hover { background-color: var(--success-hover); }
+
+.btn-secondary { background-color: transparent; border: 1px solid var(--primary-color); color: var(--primary-color); }
+
+/* Flow UI */
+.flow-card, .final-card {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 10px;
+    background-color: var(--border-color);
+    border-radius: 5px;
+    margin: 1.5rem 0 0.5rem;
+    overflow: hidden;
+}
+
+#progress-bar {
+    height: 100%;
+    background-color: var(--primary-color);
+    width: 16.66%;
+    transition: width 0.4s ease;
+}
+
+#step-indicator {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.timer-box {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: var(--bg-color);
+    border-radius: var(--radius);
+}
+
+.wait-text {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+#countdown-timer {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* Final View */
+.final-thumbnail {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    margin: 1.5rem 0;
+}
+
+/* Ads Container */
+.ad-container {
+    width: 100%;
+    min-height: 50px;
+    background-color: var(--ad-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    overflow: hidden;
+    text-align: center;
+}
+.ad-container::before {
+    content: "Advertisement";
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    position: absolute;
+    transform: translateY(-50%);
+    opacity: 0.5;
+    z-index: 0;
+}
+.ad-container > * { z-index: 1; position: relative; }
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--card-bg);
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+}
+.footer-links { margin-top: 1rem; }
+.footer-links a { color: var(--primary-color); text-decoration: none; margin: 0 0.5rem; }
